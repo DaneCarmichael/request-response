@@ -69,7 +69,9 @@ loop do
       index = @params[:id].to_i-1
       if index > users.users.length
         puts "HTTP/1.1 404 (Not Found)"
+        puts "User not found."
       else
+        puts @params
         puts "HTTP/1.1 200 OK "
         users.users[index].each { |key, value| puts "#{key}: #{value}"}
       end
