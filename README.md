@@ -4,7 +4,9 @@ ___
 This program will take input from the user in the form of an HTTP request.
 
 User input:
-    ```Supply a valid HTTP Request URL (h for help, q to quit) > 'GET http://localhost:3000/users/5 HTTP/1.1'```rb
+```
+Supply a valid HTTP Request URL (h for help, q to quit) > 'GET http://localhost:3000/users/5 HTTP/1.1'
+```
 
 After the user input the program will parse the URL. The parsing will break the URL into it's elements (e.g. domain, sub-domain, tld.)
 
