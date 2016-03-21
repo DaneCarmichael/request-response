@@ -62,16 +62,15 @@ loop do
     users = Users.new
     if @params[:resource] == "users" && @params[:id] == nil
       puts "HTTP/1.1 200 OK \n"
-      puts users.users.length
       users.users.each do |h|
         h.each {|key, value| puts "#{key}: #{value} " }
       end
     elsif @params[:resource] == "users" && @params[:id]
       index = @params[:id].to_i
       if index > users.users.length - 1
-        puts "HTTP/1.1 404 (Not Found)\n"
+        puts "HTTP/1.1 404 (Not Found)"
       elsif
-        puts "HTTP/1.1 200 OK \n"
+        puts "HTTP/1.1 200 OK "
       end
     end
     # YOUR CODE GOES ABOVE HERE  ^
