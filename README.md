@@ -4,12 +4,12 @@ ___
 This program will take input from the user in the form of an HTTP request.
 
 User input:
-    ```Supply a valid HTTP Request URL (h for help, q to quit) > 'GET http://localhost:3000/users/5 HTTP/1.1'```
+    ```Supply a valid HTTP Request URL (h for help, q to quit) > 'GET http://localhost:3000/users/5 HTTP/1.1'```rb
 
 After the user input the program will parse the URL. The parsing will break the URL into it's elements (e.g. domain, sub-domain, tld.)
 
 ####Parser
-```
+```rb
   pieces = raw_request.split(' ')
   method = pieces[0]
   uri    = pieces[1]
@@ -23,7 +23,7 @@ After the user input the program will parse the URL. The parsing will break the 
 ``` 
   
 ####Output
-```
+```rb
  {:method=>"GET", :uri=>"http://localhost:3000/users", :http_version=>"HTTP/1.1", :protocol=>"http", :subdomain=>"localhost:3000", :domain_name=>nil, 
    :tld=>nil, :full_url=>"localhost 3000", :params=>{:resource=>"users", :id=>nil, :action=>nil}}
 ```
@@ -36,7 +36,7 @@ The program will then take the information from the paramaters hash outputted fr
 `{:resource=>"users", :id=>"1", :action=>nil}`
 
 ###### Result from database
-```
+```rb
 HTTP/1.1 200 OK
 first_name: Dane
 last_name: Carmichael
